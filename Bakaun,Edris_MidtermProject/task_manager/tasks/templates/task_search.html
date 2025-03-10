@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'task.css' %}">
+</head>
+<body class="List-Container">
+    <section class="view-container">
+        <a href="{% url 'Task_List' %}" class="btn-back">Back</a>
+        <form class="Search" method="GET" action="{% url 'task_search' %}">
+            <input type="text" name="q" placeholder="Search" value="{{ query }}">
+            <button type="submit">Search</button>
+        </form>
+        <p></p>
+        <a class="addTask" href="{% url 'AddTask' %}">Add Task</a>
+
+        {% if results %}
+        <h3>Results for "{{ query }}":</h3>
+        <table class="view-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in results %}
+                <tr>
+                    <td>{{task.title}}</td>
+                    <td>{{task.description}}</td>
+                    <td>{{task.due_date}}</td>
+                    <td>{{task.status}}</td>
+                    <td><a href="{% url 'editTask' task.id %}">Edit</a><a href="{% url 'confirmDelete' task.id %}">Delete</a></td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% elif query %}
+        <p>No results found for "{{ query }}".</p>
+        {% endif %}
+    </section>
+</body>
+</html>

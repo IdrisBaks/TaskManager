@@ -1,0 +1,111 @@
+/* Reset and Base Styles */
+body {
+    font-family: 'Google Sans', 'Arial', sans-serif; /* Google Sans for consistency */
+    background-color: #e8f0fe; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Main Container */
+.deletion-container {
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8f0fe; /* Light blue background */
+}
+
+.confirm-box {
+    width: 500px; /* Fixed width for the confirmation box */
+    padding: 20px; /* Padding for better alignment */
+    background: white; /* White background for the box */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    font-family: 'Google Sans', 'Arial', sans-serif; /* Consistent font */
+}
+
+/* Image in the confirmation box */
+.confirm-box img {
+    width: 60px; /* Fixed width for the image */
+    height: 60px; /* Fixed height for the image */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Heading styles */
+.confirm-box h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-weight: 700; /* Bold font weight */
+    color: #1a73e8; /* Google blue */
+}
+
+/* Delete text styles */
+.delete-text {
+    color: #ea4335; /* Red color for delete warning */
+    font-size: 20px; /* Font size for delete text */
+    font-weight: bold; /* Bold font weight */
+}
+
+/* Task name styles */
+.task-name {
+    color: #080808; /* Dark text color */
+    font-size: 22px; /* Font size for task name */
+    font-weight: 600; /* Semi-bold font weight */
+    margin-top: 5px; /* Space above the task name */
+    align-items: center; /* Center alignment */
+}
+
+/* Button container */
+.Btns {
+    display: flex; /* Flexbox for button alignment */
+    justify-content: center; /* Center buttons */
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Button styles */
+.Cancel, .Delete {
+    width: 45%; /* Width for buttons */
+    height: 45px; /* Height for buttons */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    display: flex; /* Flexbox for button content */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+    font-weight: bold; /* Bold font weight */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+/* Cancel button styles */
+.Cancel {
+    background-color: #f1f3f4; /* Light gray background */
+    color: #5f6368; /* Dark gray text */
+    border: 1px solid #dadce0; /* Light border */
+}
+
+.Cancel:hover {
+    background-color: #dadce0; /* Darker gray on hover */
+}
+
+/* Delete button styles */
+.Delete {
+    background-color: #ea4335; /* Red background */
+    color: white; /* White text */
+}
+
+.Delete:hover {
+    background-color: #d93025; /* Darker red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .confirm-box {
+        width: 90%; /* Full width on smaller screens */
+    }
+}

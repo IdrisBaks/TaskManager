@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'task_list.css' %}">
+</head>
+<body class="List-Container">
+    <section class="view-container">
+        <h1>TASK MANAGER</h1>
+        <p></p>
+        <form class="Search" method="GET" action="{% url 'task_search' %}">
+            <input type="text" name="q" placeholder="Search by Title" value="{{ query }}">
+            <button type="submit">Search</button>
+
+            <p></p>
+
+        </form>
+<a class="addTask" href="{% url 'AddTask' %}">Add Task</a>
+
+        </form>
+
+        <table class="view-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in Task %}
+                <tr>
+                    <td>{{task.title}}</td>
+                    <td>{{task.description}}</td>
+                    <td>{{task.due_date}}</td>
+                    <td>{{task.status}}</td>
+                    <td><a href="editTask/{{task.id}}/">Edit</a><a href="confirmDelete/{{task.id}}/">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

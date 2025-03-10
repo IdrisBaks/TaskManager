@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'delete.css' %}">
+</head>
+<body class="deletion-container">
+    <div class="confirm-box">
+        <h2>Are You Sure You Want To Delete?</h2>
+        <p class="task-name">'{{Task.title}}'</p>
+        <div class="Btns">
+            <a class="Cancel" href="{%url 'Task_List'%}">Cancel</a>
+            <a class="Delete" href="delete_task/">Yes</a>
+        </div>
+    </div>
+</body>
+</html>

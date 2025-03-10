@@ -1,0 +1,103 @@
+/* Reset and Base Styles */
+body {
+    font-family: 'Google Sans', 'Arial', sans-serif;
+    background-color: #e8f0fe;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.deletion-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8f0fe;
+}
+
+.confirm-box {
+    width: 500px;
+    padding: 20px; /* Adjusted padding for better alignment */
+
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Removed text-align: center; to allow button alignment */
+
+    font-family: 'Google Sans', 'Arial', sans-serif;
+}
+
+.confirm-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.confirm-box h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #1a73e8;
+}
+
+.delete-text {
+    color: #ea4335;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.task-name {
+    color: #080808;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 5px;
+    align-items: center;
+}
+
+/* Buttons */
+.Btns {
+    display: flex;
+    justify-content: center; /* Center buttons for better alignment */
+
+    margin-top: 10px; /* Reduced margin for better spacing */
+
+}
+
+
+.Cancel, .Delete {
+    width: 45%;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Cancel {
+    background-color: #f1f3f4;
+    color: #5f6368;
+    border: 1px solid #dadce0;
+}
+
+.Cancel:hover {
+    background-color: #dadce0;
+}
+
+.Delete {
+    background-color: #ea4335;
+    color: white;
+}
+
+.Delete:hover {
+    background-color: #d93025;
+}

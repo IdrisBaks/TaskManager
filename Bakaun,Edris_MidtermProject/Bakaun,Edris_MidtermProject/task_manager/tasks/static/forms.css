@@ -1,0 +1,102 @@
+/* Reset and Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f3f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Back Button */
+.btn-back {
+    margin-bottom: 15px;
+    text-decoration: none;
+    background: #1a73e8;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    justify-content: flex-end;
+}
+
+.btn-back:hover {
+    background: #1558b3;
+}
+
+/* Form Styling */
+.form-container {
+    text-align: left;
+    margin-top: 10px;
+}
+
+h2 {
+    color: #202124;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #5f6368;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+input, textarea, select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 14px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    color: #202124;
+}
+
+/* Adjust the textarea */
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Submit Button */
+.btn-submit {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #1558b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
